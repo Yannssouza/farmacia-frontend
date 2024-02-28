@@ -1,7 +1,8 @@
-import { Link, useNavigate } from "react-router-dom";
-import React from "react";
+import React, { useContext } from 'react'
+import { Link, useNavigate } from 'react-router-dom'
 
 function Navbar() {
+
   return (
     <>
       <div className="w-full bg-red-500 text-white flex justify-center py-4">
@@ -16,7 +17,7 @@ function Navbar() {
             <Link to="/categorias" className="hover:underline">
               Categorias
             </Link>
-            <div className="hover:underline">Cadastrar Categoria</div>
+            <Link to='/cadastroCategoria' className='hover:underline'>Cadastrar Categoria</Link>
           </div>
         </div>
       </div>

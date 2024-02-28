@@ -6,6 +6,7 @@ import Footer from "./components/footer/Footer";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./pages/home/Home";
 import ListaCategorias from "./components/categorias/listaCategorias/ListaCategorias";
+import FormularioCategoria from "./components/categorias/formularioCategorias/FormularioCategoria";
 
 function App() {
   return (
@@ -16,6 +17,14 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/categorias" element={<ListaCategorias />} />
+            <Route
+              path="/cadastroCategoria"
+              element={<FormularioCategoria />}
+            />
+            <Route
+              path="/editarCategoria/:id"
+              element={<FormularioCategoria />}
+            />
           </Routes>
         </div>
         <Footer />
