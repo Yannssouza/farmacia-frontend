@@ -1,6 +1,7 @@
 import React from "react";
 import homeLogo from "../../assets/home.png";
 import "./Home.css";
+import ListaProdutos from "../../components/produtos/listaProdutos/ListaProdutos";
 
 function Home() {
   return (
@@ -23,6 +24,7 @@ function Home() {
           </div>
         </div>
       </div>
+      <ListaProdutos />
     </>
   );
 }

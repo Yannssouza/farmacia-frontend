@@ -8,6 +8,7 @@ import Home from "./pages/home/Home";
 import FormularioCategoria from "./components/categorias/formularioCategorias/FormularioCategoria";
 import ListaCategorias from "./components/categorias/listaCategorias/ListaCategorias";
 import DeletarCategoria from "./components/categorias/deletarCategoria/DeletarCategoria";
+import ListaProdutos from "./components/produtos/listaProdutos/ListaProdutos";
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
               path="/deletarCategoria/:id"
               element={<DeletarCategoria />}
             />
+            <Route path="/produtos" element={<ListaProdutos />} />
           </Routes>
         </div>
         <Footer />
