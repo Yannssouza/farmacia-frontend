@@ -26,7 +26,10 @@ function App() {
               path="/editarCategoria/:id"
               element={<FormularioCategoria />}
             />
-            <Route path="/deletarCategoria/:id" element={<DeletarCategoria />} />
+            <Route
+              path="/deletarCategoria/:id"
+              element={<DeletarCategoria />}
+            />
           </Routes>
         </div>
         <Footer />
