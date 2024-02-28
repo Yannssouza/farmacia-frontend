@@ -40,13 +40,13 @@ function FormularioCategoria() {
           headers: {},
         });
 
-        alert("Tema atualizado com sucesso");
+        alert("Categoria atualizado com sucesso");
         retornar();
       } catch (error: any) {
         if (error.toString().includes("403")) {
           alert("O token expirou, favor logar novamente");
         } else {
-          alert("Erro ao atualizar o Tema");
+          alert("Erro ao atualizar o Categoria");
         }
       }
     } else {
@@ -55,12 +55,12 @@ function FormularioCategoria() {
           headers: {},
         });
 
-        alert("Tema cadastrado com sucesso");
+        alert("Categoria cadastrado com sucesso");
       } catch (error: any) {
         if (error.toString().includes("403")) {
           alert("O token expirou, favor logar novamente");
         } else {
-          alert("Erro ao cadastrado o Tema");
+          alert("Erro ao cadastrado o Categoria");
         }
       }
     }
@@ -75,7 +75,7 @@ function FormularioCategoria() {
   return (
     <div className="container flex flex-col items-center justify-center mx-auto">
       <h1 className="text-4xl text-center my-8">
-        {id === undefined ? "Cadastre um novo tema" : "Editar tema"}
+        {id === undefined ? "Cadastre um novo categoria" : "Editar categoria"}
       </h1>
 
       <form className="w-1/2 flex flex-col gap-4" onSubmit={gerarNovaCategoria}>
@@ -89,7 +89,7 @@ function FormularioCategoria() {
             value={categorias.nome}
             onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
           />
-          <label htmlFor="descricao">Descrição do tema</label>
+          <label htmlFor="descricao">Descrição da categoria</label>
           <input
             type="text"
             placeholder="Descrição"
